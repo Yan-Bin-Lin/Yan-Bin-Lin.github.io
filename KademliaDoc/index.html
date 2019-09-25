@@ -170,7 +170,7 @@
 <p>在解釋Kademlia前先說說DHT的概念，DHT為<strong>distributed hash
 table</strong>(分散式雜湊表)的縮寫，概念上來說，每筆**data**都有對應的<strong>key</strong>，只要給定<strong>key</strong>就能從網路上取得<strong>data</strong>。</p>
 <div class="figure">
-<img alt="" src="_images/Dht_en.svg" /></div>
+<img alt="" src="images/Dht_en.svg" /></div>
 <p>應用在這專案中(P2PLending)來解釋，只要有ID，就能找到對應的借貸資料，或是另一位peer</p>
 </div>
 <div class="section" id="what-is-kademlia">
@@ -188,7 +188,7 @@ ID可以相同，而演萬法上也會把檔案存在相同ID的peer上。</p>
 <div class="section" id="kbucket">
 <h3>Kbucket<a class="headerlink" href="#kbucket" title="Permalink to this headline">¶</a></h3>
 <p>對於任何一個節點來說，由root開始算，將<strong>不包含</strong>自己的子樹劃分出來即為一個Kbucket，<strong>K</strong>代表這bucket最多會存著<strong>K</strong>個節點。只要所有Kbucket都至少存有一個節點，該節點就可以遍歷整個網路</p>
-<img alt="引用自wiki" src="_images/Dht_example_SVG.svg" /></div>
+<img alt="引用自wiki" src="images/Dht_example_SVG.svg" /></div>
 <div class="section" id="id1">
 <h3>路由機制<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <div class="line-block">
@@ -196,7 +196,7 @@ ID可以相同，而演萬法上也會把檔案存在相同ID的peer上。</p>
 <div class="line">由於Kbucket是拆分出來的子樹，同bucket內的節點前綴會相同，當今天把資料送給某個位置未知的節點X時，只要把資料交給同Kbucket內的節點Y，這樣等於把距離收斂至bucket內，節點Y再以自己的視角找尋bucket內的其他節點，就能將距離收斂至找到目標。</div>
 </div>
 <div class="figure">
-<img alt="" src="_images/Kad-routing.png" />
+<img alt="" src="images/Kad-routing.png" />
 </div>
 </div>
 </div>
